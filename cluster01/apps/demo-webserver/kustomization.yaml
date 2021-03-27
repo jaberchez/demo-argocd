@@ -38,8 +38,24 @@ patches:
 
   - patch: |-
       - op: replace
+        path: /metadata/name
+        value: demo-webserver
+    target:
+      kind: Route
+      name: "base-name"
+
+  - patch: |-
+      - op: replace
         path: /spec/host
         value: demo-webserver.apps.cluster01.sandbox1759.opentlc.com
+    target:
+      kind: Route
+      name: "base-name"
+
+  - patch: |-
+      - op: replace
+        path: /spec/to/name
+        value: demo-webserver
     target:
       kind: Route
       name: "base-name"
