@@ -2598,6 +2598,7 @@ spec:
           name: gpg-keys
         - mountPath: /app/config/gpg/keys
           name: gpg-keyring
+      serviceAccountName: argocd-server
       volumes:
       - configMap:
           name: argocd-ssh-known-hosts-cm
