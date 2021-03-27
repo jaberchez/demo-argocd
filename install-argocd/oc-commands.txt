@@ -1,0 +1,2 @@
+oc adm policy add-scc-to-user anyuid -z argocd-server
+oc create route passthrough argocd-server --service=argocd-server
