@@ -12,53 +12,20 @@ commonLabels:
 namespace: demo-webserver
 
 patches:
-  - patch: |-
-      - op: replace
-        path: /metadata/name
-        value: demo-webserver
-    target:
+  - target:
       kind: Deployment
-      name: "base-name"
+      name: base-name
+    path: patch-deployment.json
 
-  - patch: |-
-      - op: replace
-        path: /spec/template/spec/containers/0/name
-        value: demo-webserver
-    target:
-      kind: Deployment
-      name: "base-name"
-
-  - patch: |-
-      - op: replace
-        path: /metadata/name
-        value: demo-webserver
-    target:
+  - target:
       kind: Service
-      name: "base-name"
+      name: base-name
+    path: patch-service.json
 
-  - patch: |-
-      - op: replace
-        path: /metadata/name
-        value: demo-webserver
-    target:
+  - target:
       kind: Route
-      name: "base-name"
-
-  - patch: |-
-      - op: replace
-        path: /spec/host
-        value: demo-webserver.apps.cluster01.sandbox1759.opentlc.com
-    target:
-      kind: Route
-      name: "base-name"
-
-  - patch: |-
-      - op: replace
-        path: /spec/to/name
-        value: demo-webserver
-    target:
-      kind: Route
-      name: "base-name"
+      name: base-name
+    path: patch-route.json
 
 images:
   - name: base-image
