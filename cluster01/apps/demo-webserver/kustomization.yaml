@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - https://github.com/jaberchez/demo-kustomize-bases/app/deployment?ref=main
   - https://github.com/jaberchez/demo-kustomize-bases/app/service?ref=main
+  - https://github.com/jaberchez/demo-kustomize-bases/app/route?ref=main
 
 commonLabels:
   app: demo-webserver
@@ -33,6 +34,14 @@ patches:
         value: demo-webserver
     target:
       kind: Service
+      name: "base-name"
+
+  - patch: |-
+      - op: replace
+        path: /spec/host
+        value: demo-webserver.apps.cluster01.sandbox1759.opentlc.com
+    target:
+      kind: Route
       name: "base-name"
 
 images:
