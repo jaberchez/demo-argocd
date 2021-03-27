@@ -2,8 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - https://github.com/jaberchez/demo-kustomize-bases/app/deployment?ref=develop
-  - https://github.com/jaberchez/demo-kustomize-bases/app/service?ref=develop
+  - https://github.com/jaberchez/demo-kustomize-bases/app/deployment?ref=master
+  - https://github.com/jaberchez/demo-kustomize-bases/app/service?ref=master
 
 commonLabels:
   app: demo-webserver
