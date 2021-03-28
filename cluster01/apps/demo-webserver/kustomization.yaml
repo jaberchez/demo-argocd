@@ -5,6 +5,7 @@ resources:
   - https://github.com/jaberchez/demo-kustomize-bases/app/deployment?ref=openshift-4.7.3
   - https://github.com/jaberchez/demo-kustomize-bases/app/service?ref=openshift-4.7.3
   - https://github.com/jaberchez/demo-kustomize-bases/app/route?ref=openshift-4.7.3
+  - https://github.com/jaberchez/demo-kustomize-bases/app/secret?ref=openshift-4.7.3
 
 commonLabels:
   app: demo-webserver
@@ -26,6 +27,11 @@ patches:
       kind: Route
       name: base-name
     path: patch-route.json
+
+  - target:
+      kind: Route
+      name: base-name
+    path: patch-secret.json
 
 images:
   - name: base-image
