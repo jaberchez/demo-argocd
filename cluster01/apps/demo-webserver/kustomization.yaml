@@ -34,3 +34,6 @@ images:
     newName: quay.io/jberchez-redhat/demo-webserver
     newTag: v1.0
 
+patchesStrategicMerge:
+  - patch-deployment-env.yaml
+
