@@ -8,8 +8,10 @@ metadata:
 spec:
   template:
     containers:
-      env:
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
+      - name: base-image
+        image: base-image:base-version
+        env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
