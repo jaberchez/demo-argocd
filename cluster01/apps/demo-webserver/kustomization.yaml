@@ -40,5 +40,4 @@ images:
 
 patchesStrategicMerge:
   - patch-deployment-env.yaml
-  - patch-deployment-replicas.yaml
 
