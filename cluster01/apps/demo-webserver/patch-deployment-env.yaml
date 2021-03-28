@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: base-name
+
+spec:
+  template:
+    containers:
+      env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name

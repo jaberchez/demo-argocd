@@ -27,6 +27,8 @@ patches:
       name: base-name
     path: patch-route.json
 
+  - path: patch-deployment-env.yaml
+
 images:
   - name: base-image
     newName: quay.io/jberchez-redhat/demo-webserver
