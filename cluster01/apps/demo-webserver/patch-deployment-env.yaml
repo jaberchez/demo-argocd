@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata:
   name: base-name
+  namespace: base-namespace
 
 spec:
   template:
