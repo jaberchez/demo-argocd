@@ -41,3 +41,6 @@ images:
 patchesStrategicMerge:
   - patch-deployment-env.yaml
 
+transformers:
+  - dataReplaceInline.yaml
+
