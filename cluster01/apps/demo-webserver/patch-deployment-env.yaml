@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       containers:
-        - name: base-image
+        - name: demo-webserver
           image: base-image:base-version
 
           env:
