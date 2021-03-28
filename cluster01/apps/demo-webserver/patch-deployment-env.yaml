@@ -7,10 +7,12 @@ metadata:
 
 spec:
   template:
-    containers:
-      - name: base-image
-        image: base-image:base-version
-        env:
+    spec:
+      containers:
+        - name: base-image
+          image: base-image:base-version
+
+          env:
           - name: POD_NAME
             valueFrom:
               fieldRef:
