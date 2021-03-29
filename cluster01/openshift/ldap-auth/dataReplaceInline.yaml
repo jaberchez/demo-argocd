@@ -1,0 +1,6 @@
+apiVersion: transformers.kustomize.com/v1
+kind: DataReplaceInline
+
+metadata:
+  name: ldap-auth
+#gitFileConf: "../cluster.ini"
